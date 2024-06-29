@@ -1,0 +1,130 @@
+:root {
+  --default-color: #ffffff;
+  --background-color: #37517e;
+}
+
+.call-to-action {
+  position: relative;
+  padding: 120px;
+  clip-path: inset(0);
+}
+
+.call-to-action img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+
+}
+
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  overflow: clip;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.call-to-action h1 {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.call-to-action p {
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+  
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.call-to-action-btn {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 12px 40px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  margin: 10px;
+  letter-spacing: 1px;
+}
+.call-to-action-btn:hover {
+  transition: 0.5s;
+  background: #47b2e4;
+  border: 2px solid #47b2e4;
+  cursor: pointer;
+}
+
+.call-to-action::before {
+  content: '';
+  background: color-mix(in srgb, var(--background-color), transparent 35%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  
+}
+
+.portfolio {
+  padding: 60px
+}
+
+.portfolio-header--rowbar {
+  position: relative;      
+  height: 1px;
+  background-color: gray;
+  width: 150px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.portfolio-header--rowbar::before {
+  content: '';
+  position: absolute;      /* 부모 요소를 기준으로 절대 위치 설정 */
+  top: -1px;               /* 회색 줄의 상단에 위치하도록 설정 */
+  left: 50px;                 /* 부모 요소의 왼쪽에 위치하도록 설정 */
+  height: 3px;
+  background-color: #37517e;
+  width: 50px;
+} 
+.portfolio h1 {
+  font-size: 32px;
+  font-weight: 1000;
+  color: #37517e;
+}
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio p {
+  padding: 0 12px 60px;
+}
+
+.portfolio-items > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
