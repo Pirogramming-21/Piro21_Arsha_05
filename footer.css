@@ -1,0 +1,123 @@
+.footer_upper {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer_upper h4 {
+    font-size: 24px;
+    color: darkblue;
+    margin-bottom: 10px;
+}
+
+.footer_upper p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.search_bar {
+
+}
+
+/* 여기까지 "Join Our Newsletter" */
+
+.footer_info {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+}
+
+.footer_infobox {
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.footer_infobox > div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.area1_title {
+    font-size: 30px;
+    font-weight: 600;
+    color: darkblue;
+}
+
+.area2_links ul, .area3_services ul {
+    list-style-type: none; /* 기본 글머리표 제거 */
+    padding-left: 0; /* 왼쪽 여백 제거 */
+}
+
+.area2_links ul li, .area3_services ul li {
+    position: relative; /* li 요소를 기준으로 자식 요소 위치 설정 */
+    padding-left: 20px; /* 왼쪽 여백 추가 */
+}
+
+.area2_links ul li:before, .area3_services ul li:before {
+    content: ">"; /* 글머리표로 사용할 기호 */
+    position: absolute; /* 절대 위치 설정 */
+    left: 0; /* 왼쪽 여백 제거 */
+    color: lightblue; /* 기호 색상 설정 */
+}
+
+.area2_links h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: darkblue;
+}
+
+.area3_services h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: darkblue;
+}
+
+.area4_follow h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: darkblue;
+}
+
+.social_linkbox {
+    display: flex; /* 가로로 정렬 */
+    gap: 10px; /* 아이콘 간의 간격 */
+}
+
+.social_linkbox > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* 원형 컨테이너의 너비 */
+    height: 30px; /* 원형 컨테이너의 높이 */
+    border-radius: 50%; /* 원형 모양 */
+    background-color: #f0f0f0; /* 배경색 (필요에 따라 변경) */
+    color: #000; /* 아이콘 색상 (필요에 따라 변경) */
+    border: 1px solid gray;
+}
+
+.social_linkbox svg {
+    width: 15px;
+    height: 15px;
+}
+
+/* 여기부터 완전 발바닥 */
+
+.footer_bottom {
+    text-align: center;
+}
+
+.bottom_first {
+    font-size: 16px;
+}
+
+.bottom_credit {
+    font-size: 16px;
+}
+
+.credit_link {
+    font-size: 16px;
+    color: lightblue;
+}
