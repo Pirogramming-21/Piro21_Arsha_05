@@ -134,6 +134,7 @@ p {
   padding-right: 24px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .portfolio-header--rowbar {
@@ -178,7 +179,7 @@ p {
   align-items: center;
   margin-bottom: 20px;
 }
-.portfolio-items > div {
+.portfolio-items > button {
   font-weight: 500;
   font-size: 16px;
   border-radius: 50px;
@@ -188,9 +189,9 @@ p {
   color: black;
   margin: 5px;
   letter-spacing: 1px;
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s;
 }
-
-.portfolio-items > div:hover {
+.portfolio-items .filter-active {
   transition: 0.5s;
   background: #47b2e4;
   border: 2px solid #47b2e4;
@@ -198,12 +199,40 @@ p {
   cursor: pointer;
 }
 
+.portfolio-items > button:hover {
+  transition: 0.5s;
+  background: #47b2e4;
+  border: 2px solid #47b2e4;
+  color: white;
+  cursor: pointer;
+}
+
+.portfolio-items > button:active, 
+.portfolio-items > button:focus {
+  background-color: #47b2e4; 
+  border: 2px solid #47b2e4; 
+  color: white;
+  outline: none;
+}
+
+.portfolio-items .filter-active:not(:focus){
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: transparent;
+  padding: 8px 16px;
+  border: 2px solid white;
+  color: black;
+  margin: 5px;
+  letter-spacing: 1px;
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+  }
+
 .portfolio-img--container {
   column-count: 3;
   gap: 16px;
-  height: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  height: 1000px;
+  max-width: 1000px;
 }
 
 .portfolio-img--container img{
@@ -216,15 +245,14 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: auto;
 }
 
 .portfolio-img--container img:hover {
   .portfolio-info {
     background-color: white;
     width: 100%;
-    height: 30%;
     opacity: 0.5;
     transition: 0.5s;
   }
@@ -259,6 +287,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .portfolio-info--left > p {
   padding: 0;
   font-size: 16px;
@@ -273,8 +302,18 @@ p {
   padding: 16px;
   font-size: 24px;
   letter-spacing: 5px;
-  color: (in srgb, #444444, transparent 30%);
 }
+
+.portfolio-info--btn a {
+  text-decoration: none;
+  color: color-mix(in srgb, #444444, transparent 30%);
+}
+
+.portfolio-info--btn a:hover {
+  transition: 0.3s;
+  color: #47b2e4;
+}
+
 .portfolio-info--left {
   padding: 16px;
 }
@@ -282,18 +321,6 @@ p {
   font-size: 18px;
   font-weight: 1000;
   color: #37517e;
-}
-
-.bi bi-zoom-in::before{
-  text-decoration: none;
-  font-size: 24px;
-  margin: 16px;
-}
-
-.bi bi-link-45deg::before{
-  text-decoration: none;
-  font-size: 24px;
-  margin: 16px;
 }
 
 @media screen and (max-width: 990px) {
@@ -306,6 +333,7 @@ p {
 }
 @media screen and (max-width: 770px) {
   .portfolio-img--container {
+    margin: -18px;
     column-count: 1;
   }
 }
