@@ -1,0 +1,80 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.testimonials_title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #37517e;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* 하늘색 언더바, 어떻게 똑같이 구현하지? */
+.testimonials_title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #47b2e4;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonials > p {
+    color: #444444;
+    margin-bottom: 30px;
+}
+
+/* 여기까지 testimonials_title(변화x 부분) */
+
+.testimonials_content {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile_container {
+    margin-bottom: 30px;
+}
+
+.profile_photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile_container h5 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #37517e;
+    margin-bottom: 5px;
+}
+
+.profile_container > p {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.profile_star {
+    font-size: 20px;
+    color: #ffc107;
+    margin: 0 2px;
+}
+
+/* 여기까지 testimonials_content(변화 부분) */
