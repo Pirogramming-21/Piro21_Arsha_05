@@ -20,6 +20,14 @@ body {
     color: #444444;
 }
 
+.about-us p,
+.about-us ul li {
+    color: black;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 5px 0 20px 0;
+}
+
 .container {
     width: 100%;;
     margin: 0 auto;
@@ -27,8 +35,39 @@ body {
 }
 
 .about-us {
-    padding: 60px 0;
+    background-color: #ffffff;
+    padding: 30px 0;
     text-align: center;
+}
+
+.about-us .container {
+    padding: 0 50px; /* Reducing the side padding */
+}
+
+.about-us .col {
+    max-width: 600px; /* Adjust the max-width as needed */
+}
+
+.about-us .col ul li {
+    color: black;
+    margin-bottom: 10px;
+    padding-left: 30px; /* Adjust the padding to fit the new icon */
+    position: relative;
+    list-style: none; /* Remove the default list style */
+}
+
+.about-us .col ul li::before {
+    content: '';
+    background-image: url(check2-circle.svg); /* Update the path to the correct location of your SVG */
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #47b2e4;
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .section-title {
@@ -41,10 +80,6 @@ body {
     color: #374785;
     position: relative;
     display: inline-block;
-}
-
-.paragraph-spacing {
-    padding-bottom: 20px; /* 원하는 간격 값으로 설정 */
 }
 
 .title-bar {
@@ -85,6 +120,7 @@ body {
 }
 
 .col ul li {
+    color: black;
     margin-bottom: 10px;
     padding-left: 25px;
     position: relative;
@@ -99,7 +135,6 @@ body {
 
 .read-more {
     display: inline-block;
-    margin-top: 20px;
     padding: 8px 28px;
     color: #47b2e4;
     border: 2px solid #47b2e4;
