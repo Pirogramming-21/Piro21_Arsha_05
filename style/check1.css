@@ -1,0 +1,451 @@
+/* 해결해야 할 것! 
+1) check1_right div 안의 <img src="./image/check1.png" alt="check1_img">
+이 부분을 input button 클릭했을때 크기 조절하고 싶은데 애초에 이미지가 큰 탓에 태그 안됨
+이미지가 커지는게 아닌, 밑으로 내려가는건지 내일 다시 확인
+
++checkbox 너비가 좀 넓은것 같음. img 크기 맞추면서 줄이자.
+
+2).service_line 의 라인 가운데로 정렬하는 방법 배우기
+3)
+*/
+
+* {
+    box-sizing: border-box;
+}
+    /* Fonts 
+    // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900*/
+:root {
+    --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Jost",  sans-serif;
+    --nav-font: "Poppins",  sans-serif;
+
+    --default-color: #444444;
+    --heading-color: #37517e;
+  }
+
+
+html, body {
+    font-size: 10.5px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.4px;
+}
+#wrap {
+    text-align: center;
+}
+
+/*check1*/
+.check1 {
+    font-family:  "Jost", sans-serif;
+    width: 100%;
+    
+}
+.check1_container {
+    background-color: #f5f6f8;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.check1_left {
+    margin: 24 0 0;
+    padding: 0px 12px;
+    max-width: 60%;
+    text-align: left;
+}
+.check1_title {
+    color: #37517E;
+    font-weight: 400;
+    font-size: 34px;
+}
+.check1_subtitle {
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    margin: 0px 0px 16px;
+}
+.check1_right{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f6f8;
+    margin-left: 20px;
+}
+
+
+.check1_right > img {
+    width: 500px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f6f8;
+
+    
+}
+.check1_box {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    justify-content: left;
+    background-color: #ffffff;
+}
+.check1_box_align{
+    display: flex;
+    justify-content: space-between;
+}
+
+#toggle1,
+#toggle2,
+#toggle3{
+    display: none;
+}
+
+.check1_question,
+.check1_answer {
+    text-align: left; /* 개별 요소에도 왼쪽 정렬 추가 */
+}
+
+.check1_question {
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+}
+
+.check1_question > i{
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.check1_question > i:hover{
+    color:#47b2e4;
+}
+
+.check1_question_title_01{
+    color: #47b2e4;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 1rem;
+    font-style: "Jost",  sans-serif;
+    font-size: 17px;
+}
+.check1_question_title_02{
+    font-style: "Jost",  sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #37517E;
+    font-size: 17px;
+}
+
+.check1_question_title_02:hover{
+    color: #47b2e4;
+}
+
+.check1_answer {
+    display: none;
+    padding-top: 10px;
+    color: #444444;
+    font-family: var(--default-font);
+    font-size: 16px;
+}
+
+
+.check1_box:has(input[type="checkbox"]:checked) .check1_answer {
+    display: block;
+}
+.check1_box:has(input[type="checkbox"]:checked) .bi-chevron-right{
+    color: #47b2e4;
+    transform: rotate(90deg);
+} 
+
+.check1_box:has(input[type="checkbox"]:checked) .check1_question_title_02{
+    color: #47b2e4;
+} 
+
+.check1_left:has(input[id="toggle1"]:checked) ~ .check1_right img {
+    /*부드럽게 전환되는 효과 주기*/
+}
+
+.check1_left:has(input[id="toggle2"]:checked) ~ .check1_right img {
+/*부드럽게 전환되는 효과 주기*/
+}
+
+.check1_left:has(input[id="toggle3"]:checked) ~ .check1_right img {
+/*부드럽게 전환되는 효과 주기*/
+}
+
+
+@media (max-width: 768px) {
+    .check1_container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+/*service*/
+.services {
+    text-align: center;
+    padding: 30px 40px;
+  }
+  
+  h2 {
+    font-family: "Jost",  sans-serif;
+    color: #37517E;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .service_align{
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .SERVICES_bar {
+    height: 1px;
+    background-color: gray;
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    position: relative; /* 추가: 상대 위치 설정 */
+  }
+  
+  .SERVICES_bar::before {
+    content: '';
+    position: absolute; /* 절대 위치 설정 */
+    top: -1px;
+    left: 50%; /* 왼쪽에서 50% 위치로 이동 */
+    transform: translateX(-50%); /* 요소의 너비의 절반만큼 왼쪽으로 이동 */
+    height: 3px;
+    background-color: #47b2e4;
+    width: 50px;
+  }
+
+
+  
+  .subtitle {
+    font-size: 16px;
+    color: #444444;
+    padding-bottom: 2rem;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 5rem;
+  }
+  
+  .service-item {
+    text-align: left;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-item:hover{
+    transform: translateY(-10px); /* 호버 시 10px 위로 이동 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 선택적: 그림자 효과 강화 */
+  }
+  .service-item:hover h3 {
+    color: #47b2e4; /* 호버 시 변경될 색상 */
+  }
+  
+  .service-item > i {
+    font-size: 3rem;
+    color: #47b2e4;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    color: #2c4964;
+    font-weight: 700;
+    font-size: 20px;
+
+  }
+  
+  p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+
+
+  /* 반응형을 위한 미디어 쿼리 */
+@media (max-width: 1200px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 2rem; /* 화면이 작아질 때 패딩 줄임 */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      padding: 0 1rem; /* 더 작은 화면에서 패딩 더 줄임 */
+    }
+  }
+
+/*check2*/
+.check2 {
+    font-family:  "Jost", sans-serif;
+    width: 100%;
+    
+}
+.check2_container {
+    background-color: #f5f6f8;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 24 0 0;
+}
+
+.check2_align{
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.check2_bar {
+    height: 1px;
+    background-color: gray;
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    position: relative; /* 추가: 상대 위치 설정 */
+  }
+  
+  .check2_bar::before {
+    content: '';
+    position: absolute; /* 절대 위치 설정 */
+    top: -1px;
+    left: 50%; /* 왼쪽에서 50% 위치로 이동 */
+    transform: translateX(-50%); /* 요소의 너비의 절반만큼 왼쪽으로 이동 */
+    height: 3px;
+    background-color: #47b2e4;
+    width: 50px;
+  }
+
+.check2_title {
+    font-family: "Jost",  sans-serif;
+    color: #37517E;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+.check2_subtitle {
+    font-size: 16px;
+    color: #444444;
+    padding-bottom: 2rem;
+}
+.check2_box {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    justify-content: left;
+    background-color: #ffffff;
+}
+.check2_box_align{
+    display: flex;
+
+}
+
+#toggle1_check2,
+#toggle2_check2,
+#toggle3_check2,
+#toggle4_check2,
+#toggle5_check2{
+    display: none;
+}
+
+.check2_question,
+.check2_answer {
+    text-align: left; /* 개별 요소에도 왼쪽 정렬 추가 */
+}
+
+.check2_question {
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+}
+
+/*화살표 부분 */
+.check2_question > .bi-chevron-right{
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.check2_question > .bi-chevron-right:hover{
+    color:#47b2e4;
+}
+
+/*check2_question_img_01 -> i class로 변경하기*/
+    .bi-question-circle {
+        padding-right: 10px;
+        color: #47b2e4;
+        top: 22px;
+        left: 20px;
+        font-size: 20px;
+        line-height: 0;
+        transition: 0.3s;
+      }
+
+.check2_question_title_02{
+    font-style: "Jost",  sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #37517E;
+    font-size: 17px;
+}
+
+.check2_question_title_02:hover{
+    color: #47b2e4;
+}
+
+.check2_answer {
+    display: none;
+    padding-top: 10px;
+    color: #444444;
+    font-family: var(--default-font);
+    font-size: 16px;
+}
+
+
+.check2_box:has(input[type="checkbox"]:checked) .check2_answer {
+    display: block;
+}
+.check2_box:has(input[type="checkbox"]:checked) .bi-chevron-right{
+    color: #47b2e4;
+    transform: rotate(90deg);
+} 
+
+.check2_box:has(input[type="checkbox"]:checked) .check2_question_title_02{
+    color: #47b2e4;
+} 
+
+
+.check2_box_all{
+    padding: 0px 60px;
+    
+}
