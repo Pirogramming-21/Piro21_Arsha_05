@@ -1,3 +1,4 @@
+/* TEAM 섹션*/
 .team {
     display: block;
     padding: 50px 20px;
@@ -8,7 +9,7 @@
 .container-section-title h2 {
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-bottom: 20px;
     position: relative;
 }
@@ -39,6 +40,11 @@
     width: 550px;
     align-items: center;
     box-sizing: border-box;
+    transition: transform 0.2s;
+}
+
+.member-card:hover {
+    transform: translateY(-2.5px);
 }
 
 .pic img {
@@ -82,4 +88,147 @@
 .social img {
     width: 20px;
     height: 20px;
+}
+
+.portfolio-header--rowbar {
+    /*제목 밑에 파란색 바*/
+    position: relative;
+    height: 1px;
+    background-color: gray;
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin: 10px auto;
+}
+
+.portfolio-header--rowbar::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50px;
+    height: 3px;
+    background-color: #47b2e4;
+    width: 50px;
+}
+
+.social_linkbox {
+    display: flex;
+    gap: 10px;
+}
+
+.social>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+
+/* PRICING 섹션 */
+.pricing {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-title p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.box h4 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.box h4 sup {
+    font-size: 20px;
+    top: -10px;
+}
+
+.box h4 span {
+    font-size: 16px;
+    color: #666;
+}
+
+.box ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.box ul li {
+    padding: 10px 0;
+    color: #333;
+}
+
+.box ul .na {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+.box .btn-wrap {
+    margin-top: 20px;
+}
+
+.btn-buy {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background: #47b2e4;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-buy:hover {
+    background: #47b2e4;
+    color: #fff;
+}
+
+.box-featured {
+    border-top: 4px solid #47b2e4;
+}
+
+.box-featured .btn-buy {
+    background: #47b2e4;
+    color: #fff;
+    border: none;
+}
+
+.box-featured .btn-buy:hover {
+    background: #47b2e4;
+    color: #fff;
 }
