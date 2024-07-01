@@ -172,6 +172,16 @@
     padding: 10px;
     border: 1px solid #ced4da;
     border-radius: 4px;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+.right_name input:hover, .right_email input:hover, .right_subject input:hover, .right_message textarea:hover {
+    border-color: #209dd8;
+}
+
+.right_name input:focus, .right_email input:focus, .right_subject input:focus, .right_message textarea:focus {
+    border-color: #209dd8;
 }
 
 .right_subject {

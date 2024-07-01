@@ -29,10 +29,11 @@
 .search_bar input[type="email"] {
     width: 80%;
     padding: 12px 15px;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 50px 0 0 50px;
     outline: none;
     font-size: 16px;
+    transition: border-color 0.3s;
 }
 
 .search_bar button {
@@ -46,6 +47,10 @@
     font-size: 16px;
     font-weight: 500;
     transition: background-color 0.3s ease;
+}
+
+.search_bar input[type="email"]:hover {
+    border-color: #209dd8;
 }
 
 .search_bar button:hover {
@@ -150,7 +155,31 @@
     gap: 10px;
 }
 
-.social_linkbox > div {
+/* 여기부터 */
+.social_linkbox > a {
+    display: flex;
+    text-decoration: none;
+}
+
+.social_linkbox > a > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1px solid gray;
+    transition: background-color 0.3s;
+}
+
+.social_linkbox > a > div:hover {
+    background-color: #209dd8;
+}
+/* 여기까지가 a링크 추가로 생긴 부분 */
+
+/* .social_linkbox > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +194,7 @@
 
 .social_linkbox > div:hover {
     background-color: #209dd8;
-}
+} */
 
 .social_linkbox svg {
     width: 16px;
@@ -191,4 +220,30 @@
 .credit_link {
     font-size: 16px;
     color: #47b2e4;
+}
+
+/* 여기부터 scroll 버튼 */
+.footer_scroll {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.footer_scroll:hover svg {
+    fill: #209dd8;
+    transform: scale(1.1);
+}
+
+.footer_scroll svg {
+    fill: #47b2e4;
+    width: 40px;
+    height: 40px;
+    padding: 0.5px;
+    transition: fill 0.3s, transform 0.3s;
 }
