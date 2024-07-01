@@ -112,9 +112,14 @@
 }
 
 .sns_icon {
-    margin-right: 8px;
+    margin-right: 9px;
     background:
         color-mix(in srgb, #444444, transparent 94%);
+}
+
+.sns_icon:hover {
+    background-color: #47b2e4;
+    color: white;
 }
 
 .portfolio-header--rowbar {
@@ -151,6 +156,7 @@
     height: 30px;
     border-radius: 50%;
     background-color: #f0f0f0;
+    color: #666;
 }
 
 
@@ -160,8 +166,13 @@
     background: #f5f6f8;
 }
 
+.pricing-container {
+    padding-bottom: 30px;
+}
+
 .section-title {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .section-title h2 {
@@ -181,7 +192,15 @@
     display: flex;
     padding-left: 250px;
     padding-right: 250px;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.price-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
@@ -192,6 +211,7 @@
     height: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    margin-right: 28px;
 
     margin-bottom: 20px;
 
@@ -293,7 +313,7 @@
 
 /* skills 섹션 */
 .skills {
-    padding: 60px 0;
+    padding: 0px 0;
     background: #fff;
     justify-content: center;
     scroll-margin-top: 88px;
@@ -302,7 +322,12 @@
 
 .container-skills-row {
     align-items: center;
+    padding: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
 }
+
 
 .img-box {
     text-align: right;
@@ -312,15 +337,18 @@
     width: 100%;
     height: auto;
     max-width: 600px;
+    padding: 28px;
 }
 
 .skills-content {
-    padding: 20px;
+    padding-top: 150px;
+    padding-bottom: 100px;
     text-align: left;
+    vertical-align: middle;
 }
 
 .skills-content h3 {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 700;
     color: #37517e;
     margin-bottom: 20px;
@@ -340,7 +368,7 @@
 }
 
 .skill {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .skill-name {
@@ -356,7 +384,7 @@
 }
 
 .bar-fill {
-    height: 20px;
+    height: 8px;
     width: 0;
     animation: fillBar 2s forwards;
 }
@@ -390,7 +418,8 @@
 .skill2 {
     display: flex;
     justify-content: space-between;
-    color: #333;
+    color: #444444;
+    font-weight: 600;
 }
 
 @keyframes fillBar {
