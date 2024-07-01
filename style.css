@@ -264,9 +264,10 @@ input[type="radio"] {
   background-color: white;
   width: 100%;
   position: absolute;
-  bottom: -100%;
+  bottom: -82px;
   opacity: 0;
 }
+
 .portfolio-img:hover .portfolio-info {
   transition: 0.3s;
   opacity: 0.9;
