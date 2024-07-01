@@ -1,0 +1,249 @@
+.footer_upper {
+    background-color: #f3f5fa;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.footer_upper h4 {
+    font-size: 24px;
+    color: #37517e;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer_upper p {
+    font-size: 15px;
+    color: #444444;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search_bar {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search_bar input[type="email"] {
+    width: 80%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search_bar button {
+    width: 20%;
+    padding: 12px 15px;
+    background-color: #47b2e4;
+    color: white;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.search_bar input[type="email"]:hover {
+    border-color: #209dd8;
+}
+
+.search_bar button:hover {
+    background-color: #209dd8;
+}
+
+/* 여기까지 "Join Our Newsletter" */
+
+.footer_info {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.footer_infobox {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.footer_infobox > div {
+    margin: 0 15px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.area1_arsha, .area4_follow {
+    flex: 1.8;
+}
+
+.area2_links {
+    flex: 1;
+}
+
+.area3_services {
+    flex: 1.2;
+}
+
+.area4_follow {
+    flex: 2.2;
+}
+
+/* area1부터 area4까지 비율 조절 */
+
+.area1_title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #37517e;
+    text-decoration: none;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.area1_arsha p {
+    color: #5e5e5e;
+    margin-bottom: 1px;
+}
+
+.area2_links h4, .area3_services h4, .area4_follow h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #37517e;
+    margin-bottom: 20px;
+}
+
+/* 여기부터 */
+.area2_links ul, .area3_services ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.area2_links ul li, .area3_services ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.area2_links ul li:before, .area3_services ul li:before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #47b2e4;
+}
+/* 여기까지 li 글머리표 수정 */
+
+.area2_links ul li span, .area3_services ul li span {
+    color: #5e5e5e;
+}
+
+.area4_follow p {
+    color: #5e5e5e;
+    margin-bottom: 20px;
+}
+
+.social_linkbox {
+    display: flex;
+    gap: 10px;
+}
+
+/* 여기부터 */
+.social_linkbox > a {
+    display: flex;
+    text-decoration: none;
+}
+
+.social_linkbox > a > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1px solid gray;
+    transition: background-color 0.3s;
+}
+
+.social_linkbox > a > div:hover {
+    background-color: #209dd8;
+}
+/* 여기까지가 a링크 추가로 생긴 부분 */
+
+/* .social_linkbox > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1px solid gray;
+    transition: background-color 0.3s;
+}
+
+.social_linkbox > div:hover {
+    background-color: #209dd8;
+} */
+
+.social_linkbox svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* 여기부터 완전 발바닥 */
+
+.footer_bottom {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.bottom_first {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.bottom_credit {
+    font-size: 16px;
+}
+
+.credit_link {
+    font-size: 16px;
+    color: #47b2e4;
+}
+
+/* 여기부터 scroll 버튼 */
+.footer_scroll {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.footer_scroll:hover svg {
+    fill: #209dd8;
+    transform: scale(1.1);
+}
+
+.footer_scroll svg {
+    fill: #47b2e4;
+    width: 40px;
+    height: 40px;
+    padding: 0.5px;
+    transition: fill 0.3s, transform 0.3s;
+}

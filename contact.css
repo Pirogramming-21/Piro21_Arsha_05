@@ -1,0 +1,223 @@
+.contact {
+    padding: 60px 20px;
+    background-color: #f8f9fa
+}
+
+.contact_title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #37517e;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* 하늘색 언더바 */
+.title_rowbar {
+    position: relative; 
+    height: 1px;
+    background-color: gray;
+    width: 150px;
+    margin: 15px auto 30px auto;
+}
+
+.title_rowbar::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: calc(50% - 25px);
+    height: 3px;
+    background-color: #47b2e4;
+    width: 50px;
+}
+
+.contact > p {
+    text-align: center;
+    color: #444444;
+    margin-bottom: 80px;
+}
+
+/* 여기까지 contact_title */
+
+.contact_content {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.contact_left {
+    border-top: 3px solid #47b2e4;
+    flex: 1;
+    border-bottom: 3px solid #47b2e4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+.contact_right {
+    border-top: 3px solid #47b2e4;
+    flex: 1.5;
+    border-bottom: 3px solid #47b2e4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* content 레이아웃 설정, 바로 밑부터 left */
+
+.left_address, .left_call, .left_email {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.adress_icon, .call_icon, .email_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #47b2e4;
+    margin-right: 15px;
+    transition: backgroudn-color 0.3s;
+}
+
+.adress_icon:hover, .call_icon:hover, .email_icon:hover {
+    background-color: #209dd8;
+}
+
+.left_address div, .left_call div, .left_email div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left_address p:first-of-type,
+.left_call p:first-of-type,
+.left_email p:first-of-type {
+    font-weight: 600;
+    font-size: 20px;
+    color: #37517e;
+    margin-bottom: 2px;
+}
+
+.left_address p:last-of-type,
+.left_call p:last-of-type,
+.left_email p:last-of-type {
+    font-size: 15px;
+    margin-top: 1px;
+}
+
+/* 구글맵 api 넣기 */
+.left_map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.map_container {
+    padding: None;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.map_container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* 여기까지 left */
+/* 바로 밑부터 right */
+
+.right_top, .right_subject, .right_message {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.right_top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5px;
+    flex: 1;
+}
+
+.right_name, .right_email {
+    width: 45%;
+}
+
+.right_name p, .right_email p, .right_subject p, right_message p {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.right_name input, .right_email input, .right_subject input, .right_message textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+.right_name input:hover, .right_email input:hover, .right_subject input:hover, .right_message textarea:hover {
+    border-color: #209dd8;
+}
+
+.right_name input:focus, .right_email input:focus, .right_subject input:focus, .right_message textarea:focus {
+    border-color: #209dd8;
+}
+
+.right_subject {
+    margin-bottom: 0.5px;
+    flex: 1;
+}
+
+.right_message {
+    margin-bottom: 0.5px;
+    flex: 4;
+}
+
+.right_message textarea {
+    height: 80%;
+    resize: vertical;
+}
+
+.right_button {
+    display: flex;
+    margin-top: 10px;
+
+    background-color: #47b2e4;
+    padding: 10px 10px;
+    border-radius: 60px;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.right_button button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.right_button:hover {
+    background-color: #209dd8;
+}
