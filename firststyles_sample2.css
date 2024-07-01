@@ -296,7 +296,7 @@ h1 {
     margin-bottom: 0;
 }
 
-p {
+.below_h1 {
     font-family: var(--default-font);
     font-size: 22px;
     margin-bottom: 30px;

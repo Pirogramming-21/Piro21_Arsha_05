@@ -1,3 +1,14 @@
+:root {
+    --background-color: #37517e;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #4668a2;
+    --contrast-color: #ffffff;
+    --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Jost", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+}
+
 .footer_upper {
     background-color: #f3f5fa;
     text-align: center;
@@ -5,6 +16,7 @@
 }
 
 .footer_upper h4 {
+    font-family: var(--heading-font);
     font-size: 24px;
     color: #37517e;
     margin-bottom: 20px;
@@ -12,7 +24,8 @@
 }
 
 .footer_upper p {
-    font-size: 15px;
+    font-family: var(--default-font);
+    font-size: 14px;
     color: #444444;
     margin-bottom: 30px;
     margin-left: auto;
@@ -27,6 +40,7 @@
 }
 
 .search_bar input[type="email"] {
+    height: 40px;
     width: 80%;
     padding: 12px 15px;
     border: 1px solid #ccc;
@@ -34,9 +48,14 @@
     outline: none;
     font-size: 16px;
     transition: border-color 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 }
 
 .search_bar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
     width: 20%;
     padding: 12px 15px;
     background-color: #47b2e4;
@@ -47,6 +66,7 @@
     font-size: 16px;
     font-weight: 500;
     transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 }
 
 .search_bar input[type="email"]:hover {
@@ -63,11 +83,11 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid #e0e0e0;
-    padding: 50px 0;
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 .footer_infobox {
+    background-color: white;
     display: flex;
     width: 90%;
     max-width: 1200px;
@@ -80,6 +100,7 @@
     height: 250px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .area1_arsha, .area4_follow {
@@ -101,6 +122,7 @@
 /* area1부터 area4까지 비율 조절 */
 
 .area1_title {
+    font-family: var(--heading-font);
     font-size: 28px;
     font-weight: 800;
     color: #37517e;
@@ -110,12 +132,15 @@
 }
 
 .area1_arsha p {
+    font-size: 14px;
+    font-family: var(--default-font);
     color: #5e5e5e;
     margin-bottom: 1px;
 }
 
 .area2_links h4, .area3_services h4, .area4_follow h4 {
-    font-size: 18px;
+    font-family: var(--heading-font);
+    font-size: 16px;
     font-weight: 600;
     color: #37517e;
     margin-bottom: 20px;
@@ -142,10 +167,14 @@
 /* 여기까지 li 글머리표 수정 */
 
 .area2_links ul li span, .area3_services ul li span {
+    font-size: 14px;
+    font-family: var(--default-font);
     color: #5e5e5e;
 }
 
 .area4_follow p {
+    font-size: 14px;
+    font-family: var(--default-font);   
     color: #5e5e5e;
     margin-bottom: 20px;
 }
@@ -168,7 +197,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #f0f0f0;
+    background-color: white;
     color: #000;
     border: 1px solid gray;
     transition: background-color 0.3s;
@@ -204,21 +233,21 @@
 /* 여기부터 완전 발바닥 */
 
 .footer_bottom {
+    background-color: #ffffff;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0 50px 0;
 }
 
 .bottom_first {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .bottom_credit {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .credit_link {
-    font-size: 16px;
+    font-size: 14px;
     color: #47b2e4;
 }
 

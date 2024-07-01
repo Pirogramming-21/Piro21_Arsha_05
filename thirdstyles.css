@@ -101,6 +101,7 @@ body {
 }
 
 .content {
+    flex-direction: row;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -160,14 +161,13 @@ body {
     color: #ffffff;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .content {
         flex-direction: column;
         align-items: center;
     }
 
     .col {
-        text-align: left; /* 작은 화면에서는 왼쪽 정렬 */
+        text-align: left; 
     }
-}
+}*/

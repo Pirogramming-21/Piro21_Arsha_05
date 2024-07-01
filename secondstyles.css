@@ -54,14 +54,14 @@ body {
     transform: scale(1.1); /* hover 시 이미지 크기 확대 */
 }
 
-@keyframes slide {
+@keyframes logo-slide {
     0%, 10% {
         transform: translateX(0);
     }
     12%, 22% {
         transform: translateX(-16.666%);
     }
-    24%, 34% {
+    24%, 34% { d
         transform: translateX(-33.333%);
     }
     36%, 46% {
