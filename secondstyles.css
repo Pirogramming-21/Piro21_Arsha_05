@@ -17,7 +17,8 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 50px; /* 양 끝에 더 많은 공간 추가 */
+    padding: 0 50px;
+    /* 양 끝에 더 많은 공간 추가 */
 }
 
 .swiper {
@@ -32,54 +33,76 @@ body {
 .swiper-wrapper {
     display: flex;
     transition: transform 2s ease-in-out;
-    animation: slide 60s infinite;
+    animation: logo-slide 60s infinite;
 }
 
 .swiper-slide {
     flex: 0 0 auto;
-    width: calc(100% / 6); /* 7개의 로고가 보이도록 설정 */
+    width: calc(100% / 6);
+    /* 7개의 로고가 보이도록 설정 */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .img-fluid {
-    max-width: 60%; /* 이미지 크기를 더 줄이기 */
+    max-width: 60%;
+    /* 이미지 크기를 더 줄이기 */
     height: auto;
-    padding: 0 20px; /* 이미지 간의 간격을 늘리기 */
+    padding: 0 20px;
+    /* 이미지 간의 간격을 늘리기 */
     transition: transform 0.3s ease-in-out;
 }
 
 .img-fluid:hover {
-    transform: scale(1.1); /* hover 시 이미지 크기 확대 */
+    transform: scale(1.1);
+    /* hover 시 이미지 크기 확대 */
 }
 
 @keyframes logo-slide {
-    0%, 10% {
+
+    0%,
+    10% {
         transform: translateX(0);
     }
-    12%, 22% {
+
+    12%,
+    22% {
         transform: translateX(-16.666%);
     }
-    24%, 34% { d
-        transform: translateX(-33.333%);
+
+    24%,
+    34% {
+        d transform: translateX(-33.333%);
     }
-    36%, 46% {
+
+    36%,
+    46% {
         transform: translateX(-50%);
     }
-    48%, 58% {
+
+    48%,
+    58% {
         transform: translateX(-66.666%);
     }
-    60%, 70% {
+
+    60%,
+    70% {
         transform: translateX(-83.333%);
     }
-    72%, 82% {
+
+    72%,
+    82% {
         transform: translateX(-100%);
     }
-    84%, 94% {
+
+    84%,
+    94% {
         transform: translateX(-116.666%);
     }
-    96%, 100% {
+
+    96%,
+    100% {
         transform: translateX(-133.333%);
     }
 }
